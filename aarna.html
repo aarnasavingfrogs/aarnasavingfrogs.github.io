@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarna Saving Frogs</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, serif;
+      background: #1a3d2b;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: url("https://images.unsplash.com/photo-1550353127-b0da3aeaa0c8?w=1200&q=80") center/cover no-repeat;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 61, 43, 0.55);
+    }
+    .hero-text {
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+    .hero-text h1 { font-size: 38px; margin-bottom: 6px; }
+    .hero-text p { font-size: 17px; opacity: 0.9; }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      background: #1a3d2b;
+      padding: 14px 20px 0;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px 6px 0 0;
+      font-size: 15px;
+      font-family: Georgia, serif;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tab-btn:hover { background: rgba(255,255,255,0.18); }
+    .tab-btn.active { background: white; color: #2e5d38; }
+
+    .content {
+      background: white;
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 28px;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 { color: #2e5d38; font-size: 20px; margin-bottom: 14px; }
+    p { margin-bottom: 14px; font-size: 15px; line-height: 1.65; color: #333; }
+    ul { margin: 10px 0 20px 22px; line-height: 2; font-size: 15px; }
+    li { margin-bottom: 4px; }
+
+    .highlight {
+      background: #f5f0e8;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .highlight p { margin: 0; font-size: 18px; }
+
+    .donate-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .donate-btn {
+      background: #2e5d38;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 15px;
+      font-family: Georgia, serif;
+      cursor: pointer;
+    }
+    .donate-btn:hover { background: #3a6e47; }
+
+    .videos { margin-top: 30px; }
+    .video-wrap { margin-bottom: 20px; }
+    .video-wrap h3 { font-size: 15px; margin-bottom: 10px; }
+    .video-wrap iframe { width: 100%; height: 220px; border: none; border-radius: 5px; }
+
+    .hidden { display: none; }
+
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 26px; }
+      .content { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Aarna Saving Frogs</h1>
+      <p>Conservation starts with awareness</p>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('about')">About</button>
+    <button class="tab-btn" onclick="showTab('problem')">The Problem</button>
+    <button class="tab-btn" onclick="showTab('help')">How to Help</button>
+    <button class="tab-btn" onclick="showTab('donate')">Donate</button>
+  </div>
+
+  <div class="content">
+    <!-- ABOUT -->
+    <div id="about">
+      <h2>About Tree Frogs</h2>
+      <p>Tree frogs are some of the most fascinating organisms on earth. These frogs have some of the craziest abilities and adaptations.
+Just a few of these are,<br>
+•Sticky pads on their feet to hang on trees or branches<br>
+•Ability to tolerate freezing temperatures by<br>
+•Amplifying their call by getting in groups<br>
+•Make their saliva sticky or thin to catch insects<br>
+These organisms have adapted to have amazing abilities to survive better in their environment</p>
+      <p>Tree frogs play an important role in their ecosystem. They eat insects like mosquitoes, beetles, etc. Without them, the ecosystem could become unbalanced and insect populations could become out of control.</p>
+      <p>However, these frogs are being wiped out of their environment all because of us.</p>
+      <p>So we need to take action immediately. We need to rebuild these environments that these frogs live in and protect them from extinction.</p>
+      <div class="videos">
+        <h2 style="margin-top: 30px;">Videos</h2>
+        <div class="video-wrap">
+          <h3>Red-Eyed Tree Frog</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/42GAn4v5MgE?si=dOPil0BqL2ps3-Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <div id="problem" class="hidden">
+      <h2>The Problem</h2>
+      <p>Tree frogs are being wiped out of their environment — and it is all because of us.</p>
+      <p>Tree frog populations are decreasing at a rate of 3.79% each year. That number will only continue to rise as more forests are cut down for agriculture and urban development.</p>
+      <p>When forests are cut down, the tree frogs lose their homes, their food sources, and protection from predators. Many frogs also die from the illegal pet trade. Even though they are beautiful, they do not do well outside of their natural habitat.</p>
+      <p>Chytrid fungus is another serious threat. This deadly disease has already wiped out many frog populations worldwide. When the frogs' homes are destroyed, they become even more vulnerable to the fungus.</p>
+      <p>At this rate, many tree frog species could be extinct within decades. We need to act now.</p>
+    </div>
+
+    <!-- HOW TO HELP -->
+    <div id="help" class="hidden">
+      <h2>How to Help</h2>
+      <p>We need to take action immediately. We need to rebuild these environments that these frogs live in and protect them from extinction.</p>
+      <p>First, we will start by planting native plant and tree species in the area. Native species provide the food and shelter that tree frogs need to survive.</p>
+      <p>Then, we will remove any invasive species we have ever put in the area. This may take years to do, but it is necessary to restore the natural balance and give native wildlife a fighting chance.</p>
+      <p>Next, we will work to clean pollutants from the environment — pesticides, chemicals, and other contaminants that harm frog populations and their food sources.</p>
+      <p>Finally, we will try to pass an act to protect the areas from human destruction. We need legal protection to ensure these habitats are not destroyed again.</p>
+      <p>The goal is to give tree frog habitats enough time and space to heal so these frogs can keep living there for generations to come.</p>
+      <div style="text-align:center; margin-top:28px;">
+        <a href="#" onclick="showTab('donate'); return false;" style="background:#2e5d38; color:white; padding:13px 28px; border-radius:5px; text-decoration:none; font-size:15px; font-family:Georgia, serif;">Donate here →</a>
+      </div>
+    </div>
+
+    <!-- DONATE -->
+    <div id="donate" class="hidden">
+      <h2>Donate</h2>
+      <p>Your donation goes straight to conservation efforts to save these animals. Just 5 dollars gives us the money to plant 5 native trees.</p>
+      <div class="highlight">
+        <p><strong>$5 plants 5 native trees</strong></p>
+        <p style="font-size:14px; opacity:0.8; margin-top:6px;">Every tree creates habitat. Every habitat saves lives.</p>
+      </div>
+      <p><strong>Where your money goes:</strong></p>
+      <ul>
+        <li>Planting native tree and plant species in degraded frog habitats</li>
+        <li>Removing invasive species that threaten native wildlife</li>
+        <li>Cleaning pollutants from the environment</li>
+        <li>Funding research and population monitoring</li>
+        <li>Advocating for and enforcing habitat protection laws</li>
+      </ul>
+      <p>The tree frogs have lived on this earth for millions of years. With your help, they can keep living here for millions more.</p>
+      <div class="donate-btns">
+        <button class="donate-btn">Donate $5</button>
+        <button class="donate-btn">Donate $10</button>
+        <button class="donate-btn">Donate $25</button>
+        <button class="donate-btn">Donate $50</button>
+        <button class="donate-btn">Donate $100</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(name) {
+      document.querySelectorAll('.content > div').forEach(el => el.classList.add('hidden'));
+      document.getElementById(name).classList.remove('hidden');
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.tab-btn[onclick="showTab('${name}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
